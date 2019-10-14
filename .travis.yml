@@ -4,7 +4,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t sabyasachig/react-test ./client/Dockerfile.dev ./client
+  - docker build -t sabyasachig/react-test -f ./client/Dockerfile.dev ./client
 
 script:
   - docker run -e CI=true sabyasachig/react-test npm test
