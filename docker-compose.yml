@@ -29,7 +29,7 @@ services:
       - REDIS_PORT=6379
       - PGUSER=postgres
       - PGHOST=postgres
-      - DATABASE=postgres
+      - PGDATABASE=postgres
       - PGPASSWORD=postgres_password
       - PGPORT=5432
   client:
@@ -52,4 +52,4 @@ services:
       - ./worker:/app
     environment:
       - REDIS_HOST=redis
-      - REDIS_PORT=6379  
+      - REDIS_PORT=6379
